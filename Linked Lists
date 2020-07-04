@@ -1,0 +1,36 @@
+"""
+Linked Lists
+
+A pointer is an address in memory
+Head = address of the first node
+It is same as saying "head is pointing to the first node"
+Head is a pointer
+Each box is a node
+Each box has two parts: 
+	- a value
+	- a pointer
+"""
+
+class Node:
+	def __init__(self, data=None):
+		self.data = data
+		self.next = None   
+
+class LinkedList:
+	def __init__(self):
+		self.head = None
+
+furniture = LinkedList()
+furniture.head = Node("Chair") #Node("Chair") creates an object of type Node and assigns "Chair" as the data
+furniture.head.next = Node("Table")
+furniture.head.next.next = Node("Sofa")
+furniture.head.next.next.next = None
+
+print (furniture.head.data)
+print (furniture.head.next.data)
+print (furniture.head.next.next.data)
+
+for i in range (0, 3):
+	pointer = furniture.head
+	print (pointer.data)
+	pointer = pointer.next
