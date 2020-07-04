@@ -30,7 +30,8 @@ print (furniture.head.data)
 print (furniture.head.next.data)
 print (furniture.head.next.next.data)
 
-for i in range (0, 3):
-	pointer = furniture.head
+pointer = furniture.head
+
+while pointer != None:
 	print (pointer.data)
 	pointer = pointer.next
